@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#222831;
+    text-align: center;
+}
+
+h1{
+    color: #76ABAE;
+    font-size: 4rem;
+    font-family: fantasy;
+}
+
+.app-body{
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    height: 200px;
+    width: 40%;
+}
+
+.text{
+    height: 30px;
+    width: 50%;
+    margin: 1rem;
+}
+
+.text:focus{
+    background-color: rgb(243, 238, 174);
+}
+button{
+    height: 30px;
+    background-color:#76ABAE ;
+}
+button:hover{
+background-color: rgb(48, 75, 116);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Convert your Currency</h1> 
+    <div class="app-body">
+        <form action="/" method="post">
+            <input type="number" name="cur1" value="<%=value%>" placeholder="Enter the Currency" class="text">
+            <select id="list1" name="curr1">
+                <option value="USD" <%= currencyFrom==="USD"?'selected':''%>>USD</option>
+                <option value="NGN" <%= currencyFrom==="NGN"?'selected':''%>>NGN</option>
+                <option value="SAR" <%= currencyFrom==="SAR"?'selected':''%>>Riyal</option>
+                <option value="EUR" <%= currencyFrom==="EUR"?'selected':''%>>EURO</option>
+                <option value="JPY" <%= currencyFrom==="JPY"?'selected':''%>>Yen</option>
+            </select>
+            <br>
+            <input type="number" name="cur2" id="con" placeholder="Coversion is Processing..." value="<%=result%>" class="text" readonly>
+            <select id="list2" name="curr2">
+                <option value="USD" <%= currencyTo==="USD"?'selected':''%>>USD</option>
+                <option value="NGN" <%= currencyTo==="NGN"?'selected':''%>>NGN</option>
+                <option value="SAR" <%= currencyTo==="SAR"?'selected':''%>>Riyal</option>
+                <option value="EUR" <%= currencyTo==="EUR"?'selected':''%>>EURO</option>
+                <option value="JPY" <%= currencyTo==="JPY"?'selected':''%>>Yen</option>
+            </select>
+            <br>
+            <button type="submit">Convert</button>
+        </form>
+    </div>   
+</body>
+</html>
