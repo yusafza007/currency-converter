@@ -27,7 +27,7 @@ app.post("/", (req, res) => {
         .then((response) => {
             const data = response.data;
             const rate = data.conversion_rate;
-            const result = value * rate;
+            const result = Math.round(((value * rate) + Number.EPSILON) * 100) / 100;
 
             // Redirecting to home route with the result as a query parameter
             res.render("index",{result:result,value:value,currencyFrom:currencyFrom,currencyTo:currencyTo})
